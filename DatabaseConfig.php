@@ -3,7 +3,7 @@
  $HostName = "localhost";
  
  //Define your MySQL Database Name here.
- $DatabaseName = "Eyephoria_API_Database";
+ $DatabaseName = "dental_appointment_api_database";
  
  //Define your Database User Name here.
  $HostUser = "root";

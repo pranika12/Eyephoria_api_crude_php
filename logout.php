@@ -11,12 +11,12 @@
         {
             $userid = $_POST['user_id'];
             //logging out user for particular device...
-            $query = "DELETE FROM user_sessions WHERE uid='$userid'";
+            $query = "DELETE FROM personal_access_tokens WHERE uid='$userid'";
 
         }else{
 
             //logging out user for all devices...
-            $query = "DELETE FROM user_sessions WHERE token='$access_token'";
+            $query = "DELETE FROM personal_access_tokens WHERE token='$access_token'";
 
         }
         $query = mysqli_query($con, $query);
