@@ -75,6 +75,28 @@ function checkIdValidUser($token)
     } else {
         return null;
     }
+
+    function checkIfAdmin($token)
+{
+    $userId=checkIfValidUser($token);
+    if($userId!=null){
+        global $con;
+        $check_admin = "SELECT * FROM users WHERE id = '$userId'";
+        $result = mysqli_query($con, $check_admin);
+        $count = mysqli_num_rows($result);
+        if ($count > 0) {
+            $user = mysqli_fetch_assoc($result);
+            if ($user['isAdmin'] == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }else{
+        return false;
+    }
 }
 
 
