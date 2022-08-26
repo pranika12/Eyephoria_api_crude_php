@@ -18,7 +18,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     if ($count > 0) {
       //check if the password is correct
       $data=mysqli_fetch_assoc($result);
-      $databasePassword= $data['password'];
+      $databasePassword= $data['PASSWORD'];
       $userId= $data['id'];
       login($password, $databasePassword, $userId);
      
@@ -38,5 +38,3 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         ]
     );
 }
-
-

@@ -11,12 +11,12 @@
         {
             $userid = $_POST['user_id'];
             //logging out user for particular device...
-            $query = "DELETE FROM personal_access_tokens WHERE uid='$userid'";
+            $query = "DELETE FROM personal_access_token WHERE uid='$userid'";
 
         }else{
 
             //logging out user for all devices...
-            $query = "DELETE FROM personal_access_tokens WHERE token='$access_token'";
+            $query = "DELETE FROM personal_access_token WHERE token='$access_token'";
 
         }
         $query = mysqli_query($con, $query);
@@ -30,7 +30,8 @@
     
         } else {
     
-            $data=['success'=>false, 'message'=>'Logout failed'];
+            $data=['success'=>false, 
+            'message'=>'Logout failed'];
     
              echo json_encode($data);
         }
