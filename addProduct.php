@@ -20,7 +20,7 @@ if ($isAdmin) {
         $image_size = $_FILES['image']['size'];
         $image_ext = pathinfo($image, PATHINFO_EXTENSION);
         $image_path = "images/".$image;
-
+  
       //upload image
       if ($image_size < 5000000) {
           if ($image_ext == "jpg" || $image_ext == "png" || $image_ext == "jpeg") {

@@ -1,7 +1,7 @@
 <?php
 
 include 'DatabaseConfig.php';
-include 'helper_functions/authentication_functions.php';
+include 'helper_f unctions/authentication_functions.php';
 
 $isAdmin = checkIfAdmin($_POST['token'] ?? null);
 if ($isAdmin) {
