@@ -16,7 +16,6 @@
     if ($checkQuery > 0) {
     $row = mysqli_fetch_assoc($result);
     $user_id=$row['uid'];
-        // if token is available in database
         createOrder($user_id,$amount);
     } else {
         //if token is not found in database
